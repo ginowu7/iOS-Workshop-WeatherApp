@@ -15,6 +15,17 @@ enum Skycons: String, Codable {
     case partlyCloudyDay = "partly-cloudy-day"
     case partlyCloudyNight = "partly-cloudy-night"
     case rain, sleet, wind, fog, cloudy, snow
+
+    var color: UIColor {
+        switch self {
+        case .clearDay, .clearNight:
+            return .yellow
+        case .partlyCloudyDay, .partlyCloudyNight:
+            return .white
+        case .rain, .sleet, .wind, .fog, .cloudy, .snow:
+            return .gray
+        }
+    }
 }
 
 let STROKE: CGFloat = 0.08
@@ -128,6 +139,7 @@ class SKYIconView: UIView {
             self.pause()
         }
         self._timer = Timer.scheduledTimer(timeInterval: 1/30, target: self, selector: #selector(update(_:)), userInfo: nil, repeats: true)
+        RunLoop.main.add(_timer, forMode: RunLoop.Mode.common)
     }
     
     func pause() {

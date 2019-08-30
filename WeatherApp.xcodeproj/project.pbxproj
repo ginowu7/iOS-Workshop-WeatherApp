@@ -17,6 +17,8 @@
 		7DE0ECF82305FBA100D15F54 /* SKYIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE0ECF72305FBA100D15F54 /* SKYIconView.swift */; };
 		7DE0ED00230C758F00D15F54 /* ForcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE0ECFF230C758F00D15F54 /* ForcastView.swift */; };
 		7DE0ED02230C765300D15F54 /* ForcastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DE0ED01230C765300D15F54 /* ForcastView.xib */; };
+		7DE0ED062314751A00D15F54 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE0ED052314751A00D15F54 /* UIView+Extensions.swift */; };
+		7DE5EB9F23186FA40063EE51 /* DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE5EB9E23186FA40063EE51 /* DetailsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		7DE0ECF72305FBA100D15F54 /* SKYIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKYIconView.swift; sourceTree = "<group>"; };
 		7DE0ECFF230C758F00D15F54 /* ForcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForcastView.swift; sourceTree = "<group>"; };
 		7DE0ED01230C765300D15F54 /* ForcastView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForcastView.xib; sourceTree = "<group>"; };
+		7DE0ED052314751A00D15F54 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		7DE5EB9E23186FA40063EE51 /* DetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,8 @@
 				7DB9837422FE0B0C00444B14 /* Info.plist */,
 				7DE0ECFF230C758F00D15F54 /* ForcastView.swift */,
 				7DE0ED01230C765300D15F54 /* ForcastView.xib */,
+				7DE0ED052314751A00D15F54 /* UIView+Extensions.swift */,
+				7DE5EB9E23186FA40063EE51 /* DetailsTableViewCell.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -266,8 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DE5EB9F23186FA40063EE51 /* DetailsTableViewCell.swift in Sources */,
 				7DE0ECF82305FBA100D15F54 /* SKYIconView.swift in Sources */,
 				7DE0ED00230C758F00D15F54 /* ForcastView.swift in Sources */,
+				7DE0ED062314751A00D15F54 /* UIView+Extensions.swift in Sources */,
 				7DB9836B22FE0B0B00444B14 /* ViewController.swift in Sources */,
 				7DB9836922FE0B0B00444B14 /* AppDelegate.swift in Sources */,
 			);

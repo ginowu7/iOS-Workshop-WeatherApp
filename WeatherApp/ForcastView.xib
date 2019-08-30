@@ -12,11 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ForcastView" customModule="WeatherApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="311" height="430"/>
+            <rect key="frame" x="0.0" y="0.0" width="311" height="439"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZ1-h6-6Ss">
-                    <rect key="frame" x="0.0" y="0.0" width="311" height="396"/>
+                    <rect key="frame" x="0.0" y="0.0" width="311" height="405"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MM-uN-aJs">
                             <rect key="frame" x="2" y="5" width="307" height="21"/>
@@ -24,21 +24,21 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YxW-sX-ZOK">
-                            <rect key="frame" x="10" y="31" width="291" height="291"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YxW-sX-ZOK" customClass="SKYIconView" customModule="WeatherApp" customModuleProvider="target">
+                            <rect key="frame" x="3" y="31" width="305" height="305"/>
                             <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="YxW-sX-ZOK" secondAttribute="height" multiplier="1:1" id="d6M-bA-R4I"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHk-SU-H1B">
-                            <rect key="frame" x="2" y="327" width="307" height="38"/>
+                            <rect key="frame" x="2" y="341" width="307" height="33"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hR-8n-WbL">
-                            <rect key="frame" x="2" y="370" width="307" height="21"/>
+                            <rect key="frame" x="2" y="379" width="307" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -54,8 +54,8 @@
                         <constraint firstItem="2MM-uN-aJs" firstAttribute="top" secondItem="NZ1-h6-6Ss" secondAttribute="top" constant="5" id="N6k-h0-CTg"/>
                         <constraint firstAttribute="bottom" secondItem="6hR-8n-WbL" secondAttribute="bottom" constant="5" id="Ojl-2j-dQm"/>
                         <constraint firstItem="VHk-SU-H1B" firstAttribute="top" secondItem="YxW-sX-ZOK" secondAttribute="bottom" constant="5" id="QK1-Sx-Myc"/>
-                        <constraint firstAttribute="trailing" secondItem="YxW-sX-ZOK" secondAttribute="trailing" constant="10" id="SJj-cH-OPV"/>
-                        <constraint firstItem="YxW-sX-ZOK" firstAttribute="leading" secondItem="NZ1-h6-6Ss" secondAttribute="leading" constant="10" id="iYk-OT-M9X"/>
+                        <constraint firstAttribute="trailing" secondItem="YxW-sX-ZOK" secondAttribute="trailing" constant="3" id="SJj-cH-OPV"/>
+                        <constraint firstItem="YxW-sX-ZOK" firstAttribute="leading" secondItem="NZ1-h6-6Ss" secondAttribute="leading" constant="3" id="iYk-OT-M9X"/>
                         <constraint firstAttribute="trailing" secondItem="2MM-uN-aJs" secondAttribute="trailing" constant="2" id="irU-aR-RxT"/>
                         <constraint firstItem="YxW-sX-ZOK" firstAttribute="top" secondItem="2MM-uN-aJs" secondAttribute="bottom" constant="5" id="mUH-KH-gJF"/>
                         <constraint firstItem="2MM-uN-aJs" firstAttribute="leading" secondItem="NZ1-h6-6Ss" secondAttribute="leading" constant="2" id="mf9-UR-CBT"/>
@@ -73,7 +73,14 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-44.20289855072464" y="184.15178571428569"/>
+            <connections>
+                <outlet property="bottomLabel" destination="6hR-8n-WbL" id="MQO-dH-DVF"/>
+                <outlet property="contentView" destination="NZ1-h6-6Ss" id="JXK-se-GFD"/>
+                <outlet property="headerLabel" destination="2MM-uN-aJs" id="WG5-CU-ZOz"/>
+                <outlet property="iconView" destination="YxW-sX-ZOK" id="2nX-4m-j4L"/>
+                <outlet property="topLabel" destination="VHk-SU-H1B" id="TBi-6A-Taz"/>
+            </connections>
+            <point key="canvasLocation" x="-44.20289855072464" y="181.13839285714286"/>
         </view>
     </objects>
 </document>

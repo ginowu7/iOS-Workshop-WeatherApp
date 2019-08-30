@@ -10,13 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var detailsTableView: UITableView!
     @IBOutlet weak var todaysDateLabel: UILabel!
     @IBOutlet weak var currentDateLabel: UILabel!
     @IBOutlet weak var currentSkyconContainerView: UIView!
     @IBOutlet weak var currentSummaryLabel: UILabel!
     @IBOutlet weak var currentTemperatureLabel: UILabel!
     @IBOutlet weak var cityStateLabel: UILabel!
-    @IBOutlet weak var horizontalStackView: UIStackView!
+    @IBOutlet weak var horizontalStackView: UIStackView! {
+        didSet {
+            horizontalStackView.backgroundColor = .clear
+        }
+    }
     
     let session = URLSession.shared
     let latitude = 40.730610
@@ -96,10 +101,32 @@ class ViewController: UIViewController {
         if let icon = weatherData.currently.icon {
             let iconView = SKYIconView(frame: currentSkyconContainerView.bounds)
             iconView.setType = icon
-            iconView.setColor = .yellow
+            iconView.setColor = icon.color
             iconView.backgroundColor = .clear
             currentSkyconContainerView.addSubview(iconView)
         }
+
+        for (index, day) in weatherData.daily.days.enumerated() {
+            let view: ForcastView = ForcastView.fromNib()
+            view.backgroundColor = .clear
+            horizontalStackView.addArrangedSubview(view)
+
+            let date = Calendar.current.date(byAdding: .day, value: index, to: Date())
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "E"
+
+            if let icon = day.icon {
+                view.iconView.setType = icon
+                view.iconView.setColor = icon.color
+                view.iconView.backgroundColor = .clear
+                view.iconView.play()
+            }
+
+            view.topLabel.text = "\(Int(day.temperatureHigh))℉"
+            view.bottomLabel.text = "\(Int(day.temperatureLow))℉"
+            view.headerLabel.text = dateFormatter.string(from: date!)
+        }
+        
 
 
     }
