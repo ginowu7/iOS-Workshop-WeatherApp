@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var detailsTableView: UITableView!
     @IBOutlet weak var todaysDateLabel: UILabel!
     @IBOutlet weak var currentDateLabel: UILabel!
@@ -26,6 +25,14 @@ class ViewController: UIViewController {
     let session = URLSession.shared
     let latitude = 40.730610
     let longitude = -73.935242
+    var weatherData: WeatherData? {
+        didSet {
+            guard let unwrappedWeatherData = weatherData else {
+                return
+            }
+            update(weatherData: unwrappedWeatherData)
+        }
+    }
 
     var dateString: String {
         let date = Date()
@@ -37,6 +44,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        detailsTableView.delegate = self
+        detailsTableView.dataSource = self
+
         todaysDateLabel.text = "Today's Date"
         todaysDateLabel.textColor = .lightText
         currentDateLabel.text = dateString
@@ -69,7 +79,7 @@ class ViewController: UIViewController {
                 print(json)
 
                 let weatherData = try! JSONDecoder().decode(WeatherData.self, from: data!)
-                self.update(weatherData: weatherData)
+                self.weatherData = weatherData
             }
         }
         task.resume()
@@ -126,13 +136,22 @@ class ViewController: UIViewController {
             view.bottomLabel.text = "\(Int(day.temperatureLow))℉"
             view.headerLabel.text = dateFormatter.string(from: date!)
         }
-        
-
-
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Weather.CodingKeys.rows.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "detailsTableViewCell", for: indexPath) as! DetailsTableViewCell
+
+        cell.topLabel.text = Weather.CodingKeys.rows[indexPath.row].displayTitle
+        cell.bottomLabel.text = weatherData?.currently.value(codingKeys: Weather.CodingKeys.rows[indexPath.row])
+        return cell
     }
 
 }
@@ -172,9 +191,45 @@ struct Weather: Codable {
     let uvIndex: Int
     let windSpeed: Double
 
+    func value(codingKeys: CodingKeys) -> String {
+        switch codingKeys {
+        case .cloudCover:
+            return "\(cloudCover)"
+        default:
+            return ""
+        }
+    }
+
     enum CodingKeys: String, CodingKey {
         case cloudCover, dewPoint, humidity, icon, ozone, pressure, summary, temperature, uvIndex, windSpeed
         case precipitationProbability = "precipProbability"
+
+        static var rows: [CodingKeys] {
+            return [.summary, .humidity, .uvIndex, .windSpeed, .precipitationProbability, .cloudCover, .dewPoint]
+        }
+
+        var displayTitle: String {
+            switch self {
+            case .summary:
+                return "Summary"
+            case .humidity:
+                return "Humidity"
+            case .uvIndex:
+                return "UV Index"
+            case .windSpeed:
+                return "Wind Speed"
+            case .precipitationProbability:
+                return "Precipitation Probability"
+            case .cloudCover:
+                return "Cloud Cover"
+            case .dewPoint:
+                return "Dew Point"
+            case .ozone, .icon, .pressure, .temperature:
+                return ""
+            }
+        }
+
+
     }
 }
 
