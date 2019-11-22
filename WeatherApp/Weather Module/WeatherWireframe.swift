@@ -27,3 +27,11 @@ public class WeatherWireframe: WeatherWireframeInterface {
     }
 
 }
+
+extension WeatherWireframe {
+
+    func showMaps() {
+        let mapsViewController = MapsWireframe().createViewController()
+        self.viewController?.navigationController?.pushViewController(mapsViewController, animated: true)
+    }
+}

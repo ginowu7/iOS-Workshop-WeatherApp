@@ -39,15 +39,9 @@ class WeatherView: UIViewController {
 
     var presenter: WeatherPresenterInterface!
 
-    var dateString: String {
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        return formatter.string(from: date)
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
+
 
         // Do any additional setup after loading the view.
         view.subviews.forEach { $0.alpha = 0.0 }
@@ -60,7 +54,7 @@ class WeatherView: UIViewController {
 
         todaysDateLabel.text = "Today's Date"
         todaysDateLabel.textColor = .lightText
-        currentDateLabel.text = dateString
+
         currentDateLabel.textColor = .white
         currentSkyconContainerView.backgroundColor = .clear
         currentDateLabel.font = UIFont.systemFont(ofSize: 45, weight: UIFont.Weight.bold)
@@ -82,9 +76,19 @@ class WeatherView: UIViewController {
 
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
 
     @IBAction func topTrailingButtonPressed(_ sender: Any) {
-        print("show map")
+        presenter.mapsButtonPressed()
     }
 
     @IBAction func topLeadingButtonPressed(_ sender: Any) {
@@ -97,7 +101,11 @@ class WeatherView: UIViewController {
         }
     }
 
-    func update(weatherData: WeatherData) {
+    func update(weatherData: WeatherData?) {
+        guard let weatherData = weatherData, horizontalStackView.arrangedSubviews.isEmpty else {
+            return
+        }
+
         detailsTableView.reloadData()
         currentSummaryLabel.text = weatherData.currently.summary
         currentTemperatureLabel.text = "\(Int(weatherData.currently.temperature))℉"
@@ -142,12 +150,10 @@ class WeatherView: UIViewController {
 
 extension WeatherView: WeatherUserInterface {
 
-    func configure(weatherData: WeatherData) {
-        update(weatherData: weatherData)
-    }
-
-    func configure(city: String, state: String) {
-        self.cityStateLabel.text = "\(city), \(state)"
+    func configure(viewModel: WeatherViewModel) {
+        update(weatherData: viewModel.weatherData)
+        cityStateLabel.text = "\(viewModel.city ?? ""), \(viewModel.state ?? "")"
+        currentDateLabel.text = viewModel.dateString
     }
 
 }

@@ -14,6 +14,13 @@ class WeatherInteractor: WeatherInteractorInput {
 
     let session = URLSession.shared
 
+    func dateString() -> String {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter.string(from: date)
+    }
+
     func fetchDarkSky(latitude: Double, longitude: Double) {
         let url = URL(string: "https://api.darksky.net/forecast/4ce974ff337c67b2029030c467d68480/\(latitude),\(longitude)")!
         let task = session.dataTask(with: url) { (data, response, error) in

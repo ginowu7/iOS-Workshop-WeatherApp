@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>Stash Form</string>
+	<key>Summary</key>
+	<string>Stash Form VIPER Module</string>
+	<key>SortOrder</key>
+	<string>14</string>
+	<key>BuildableType</key>
+	<string>StashInvest</string>
+	<key>DefaultCompletionName</key>
+	<string></string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Description</key>
+			<string>Name of the VIPER Module</string>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Name</key>
+			<string>Module Name:</string>
+			<key>NotPersisted</key>
+			<string>Yes</string>
+			<key>Required</key>
+			<string>Yes</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Navigation title</string>
+			<key>Identifier</key>
+			<string>navigationTitle</string>
+			<key>Name</key>
+			<string>Navigation Title:</string>
+			<key>NotPersisted</key>
+			<string>Yes</string>
+			<key>Required</key>
+			<string>No</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Title copy for the headerCell</string>
+			<key>Identifier</key>
+			<string>headerTitle</string>
+			<key>Name</key>
+			<string>Header Title:</string>
+			<key>NotPersisted</key>
+			<string>Yes</string>
+			<key>Required</key>
+			<string>No</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Body copy for the headerCell</string>
+			<key>Identifier</key>
+			<string>headerBody</string>
+			<key>Name</key>
+			<string>Header Body:</string>
+			<key>NotPersisted</key>
+			<string>Yes</string>
+			<key>Required</key>
+			<string>No</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Title for the validation invoking cta</string>
+			<key>Identifier</key>
+			<string>ctaTitle</string>
+			<key>Name</key>
+			<string>Cta Title:</string>
+			<key>NotPersisted</key>
+			<string>Yes</string>
+			<key>Required</key>
+			<string>No</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+	</array>
+</dict>
+</plist>

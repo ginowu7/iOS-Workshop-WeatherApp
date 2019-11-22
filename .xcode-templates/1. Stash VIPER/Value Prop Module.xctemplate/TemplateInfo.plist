@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+	</array>
+	<key>Kind</key>
+	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>ValueProp VIPER Module</string>
+	<key>Summary</key>
+	<string>Classes required for a Value Prop VIPER module</string>
+	<key>SortOrder</key>
+	<string>0</string>
+	<key>BuildableType</key>
+	<string>StashInvest</string>
+	<key>DefaultCompletionName</key>
+	<string>Test</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Description</key>
+			<string>Name of the VIPER Module</string>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Name</key>
+			<string>Module Name:</string>
+			<key>NotPersisted</key>
+			<string>Yes</string>
+			<key>Required</key>
+			<string>Yes</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Name of the VIPER Module (camelCase)</string>
+			<key>Identifier</key>
+			<string>productNameCamelCase</string>
+			<key>Name</key>
+			<string>Now in camelCase... ಠ_ಠ:</string>
+			<key>NotPersisted</key>
+			<string>Yes</string>
+			<key>Required</key>
+			<string>Yes</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Description of the VIPER Module</string>
+			<key>Identifier</key>
+			<string>productNameDescription</string>
+			<key>Name</key>
+			<string>Description:</string>
+			<key>NotPersisted</key>
+			<string>Yes</string>
+			<key>Required</key>
+			<string>Yes</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Nav type type</string>
+			<key>Identifier</key>
+			<string>dismissButtonType</string>
+			<key>Name</key>
+			<string>Navigation Bar type:</string>
+			<key>NotPersisted</key>
+			<string>Yes</string>
+			<key>Required</key>
+			<string>Yes</string>
+			<key>Default</key>
+			<string>X</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Values</key>
+			<array>
+				<string>X</string>
+				<string>X + Support</string>
+				<string>Back</string>
+				<string>Back + Support</string>
+				<string>None</string>
+				<string>None + Support</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Image path</string>
+			<key>Identifier</key>
+			<string>image</string>
+			<key>Name</key>
+			<string>Image:</string>
+			<key>NotPersisted</key>
+			<string>Yes</string>
+			<key>Required</key>
+			<string>No</string>
+			<key>Default</key>
+			<string>StashUI.Image.alert</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Main text</string>
+			<key>Identifier</key>
+			<string>text</string>
+			<key>Name</key>
+			<string>Text:</string>
+			<key>NotPersisted</key>
+			<string>Yes</string>
+			<key>Required</key>
+			<string>No</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Detail text</string>
+			<key>Identifier</key>
+			<string>detailText</string>
+			<key>Name</key>
+			<string>Detail Text:</string>
+			<key>NotPersisted</key>
+			<string>Yes</string>
+			<key>Required</key>
+			<string>No</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Disclosure text</string>
+			<key>Identifier</key>
+			<string>disclosure</string>
+			<key>Name</key>
+			<string>Disclosure:</string>
+			<key>NotPersisted</key>
+			<string>Yes</string>
+			<key>Required</key>
+			<string>No</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Description</key>
+			<string>Main button title</string>
+			<key>Identifier</key>
+			<string>cta</string>
+			<key>Name</key>
+			<string>CTA:</string>
+			<key>NotPersisted</key>
+			<string>Yes</string>
+			<key>Required</key>
+			<string>No</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+	</array>
+</dict>
+</plist>

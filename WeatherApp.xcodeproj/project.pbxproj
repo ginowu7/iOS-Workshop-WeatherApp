@@ -19,6 +19,15 @@
 		7D340976232C326900093416 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D340975232C326900093416 /* Weather.swift */; };
 		7D340978232C32C900093416 /* Forcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D340977232C32C900093416 /* Forcast.swift */; };
 		7D34097A232C32F300093416 /* DailyForcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D340979232C32F300093416 /* DailyForcast.swift */; };
+		7D6698642379ED6600EDC320 /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D66985B2379ED6600EDC320 /* Maps.storyboard */; };
+		7D6698652379ED6600EDC320 /* MapsEventTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D66985C2379ED6600EDC320 /* MapsEventTracker.swift */; };
+		7D6698662379ED6600EDC320 /* MapsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D66985D2379ED6600EDC320 /* MapsPresenter.swift */; };
+		7D6698672379ED6600EDC320 /* MapsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D66985E2379ED6600EDC320 /* MapsInterface.swift */; };
+		7D6698682379ED6600EDC320 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D66985F2379ED6600EDC320 /* MapsViewController.swift */; };
+		7D6698692379ED6600EDC320 /* MapsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6698602379ED6600EDC320 /* MapsInteractor.swift */; };
+		7D66986A2379ED6600EDC320 /* MapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6698612379ED6600EDC320 /* MapsViewModel.swift */; };
+		7D66986B2379ED6600EDC320 /* MapsStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6698622379ED6600EDC320 /* MapsStrings.swift */; };
+		7D66986C2379ED6600EDC320 /* MapsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6698632379ED6600EDC320 /* MapsWireframe.swift */; };
 		7DB9836922FE0B0B00444B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB9836822FE0B0B00444B14 /* AppDelegate.swift */; };
 		7DB9837022FE0B0C00444B14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DB9836F22FE0B0C00444B14 /* Assets.xcassets */; };
 		7DB9837322FE0B0C00444B14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DB9837122FE0B0C00444B14 /* LaunchScreen.storyboard */; };
@@ -61,6 +70,15 @@
 		7D340975232C326900093416 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		7D340977232C32C900093416 /* Forcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forcast.swift; sourceTree = "<group>"; };
 		7D340979232C32F300093416 /* DailyForcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForcast.swift; sourceTree = "<group>"; };
+		7D66985B2379ED6600EDC320 /* Maps.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Maps.storyboard; sourceTree = "<group>"; };
+		7D66985C2379ED6600EDC320 /* MapsEventTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsEventTracker.swift; sourceTree = "<group>"; };
+		7D66985D2379ED6600EDC320 /* MapsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsPresenter.swift; sourceTree = "<group>"; };
+		7D66985E2379ED6600EDC320 /* MapsInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsInterface.swift; sourceTree = "<group>"; };
+		7D66985F2379ED6600EDC320 /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		7D6698602379ED6600EDC320 /* MapsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsInteractor.swift; sourceTree = "<group>"; };
+		7D6698612379ED6600EDC320 /* MapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewModel.swift; sourceTree = "<group>"; };
+		7D6698622379ED6600EDC320 /* MapsStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsStrings.swift; sourceTree = "<group>"; };
+		7D6698632379ED6600EDC320 /* MapsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsWireframe.swift; sourceTree = "<group>"; };
 		7DB9836522FE0B0B00444B14 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DB9836822FE0B0B00444B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DB9836F22FE0B0C00444B14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,6 +147,22 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		7D66985A2379ED4E00EDC320 /* Maps Module */ = {
+			isa = PBXGroup;
+			children = (
+				7D66985B2379ED6600EDC320 /* Maps.storyboard */,
+				7D66985C2379ED6600EDC320 /* MapsEventTracker.swift */,
+				7D66985D2379ED6600EDC320 /* MapsPresenter.swift */,
+				7D66985E2379ED6600EDC320 /* MapsInterface.swift */,
+				7D66985F2379ED6600EDC320 /* MapsViewController.swift */,
+				7D6698602379ED6600EDC320 /* MapsInteractor.swift */,
+				7D6698612379ED6600EDC320 /* MapsViewModel.swift */,
+				7D6698622379ED6600EDC320 /* MapsStrings.swift */,
+				7D6698632379ED6600EDC320 /* MapsWireframe.swift */,
+			);
+			path = "Maps Module";
+			sourceTree = "<group>";
+		};
 		7DB9835C22FE0B0B00444B14 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +186,7 @@
 		7DB9836722FE0B0B00444B14 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				7D66985A2379ED4E00EDC320 /* Maps Module */,
 				7D34097B232C338A00093416 /* Entities */,
 				7D340964232C312E00093416 /* Weather Module */,
 				7DE0ECF72305FBA100D15F54 /* SKYIconView.swift */,
@@ -292,6 +327,7 @@
 			files = (
 				7DB9837322FE0B0C00444B14 /* LaunchScreen.storyboard in Resources */,
 				7DE0ED02230C765300D15F54 /* ForcastView.xib in Resources */,
+				7D6698642379ED6600EDC320 /* Maps.storyboard in Resources */,
 				7DB9837022FE0B0C00444B14 /* Assets.xcassets in Resources */,
 				7D340972232C31E600093416 /* WeatherStoryboard.storyboard in Resources */,
 			);
@@ -321,19 +357,27 @@
 				7DE5EB9F23186FA40063EE51 /* DetailsTableViewCell.swift in Sources */,
 				7D340966232C315000093416 /* WeatherPresenter.swift in Sources */,
 				7D340974232C324900093416 /* WeatherData.swift in Sources */,
+				7D6698662379ED6600EDC320 /* MapsPresenter.swift in Sources */,
 				7D34096C232C319800093416 /* WeatherInterface.swift in Sources */,
+				7D66986A2379ED6600EDC320 /* MapsViewModel.swift in Sources */,
 				7D340976232C326900093416 /* Weather.swift in Sources */,
+				7D66986B2379ED6600EDC320 /* MapsStrings.swift in Sources */,
 				7DE0ECF82305FBA100D15F54 /* SKYIconView.swift in Sources */,
+				7D6698692379ED6600EDC320 /* MapsInteractor.swift in Sources */,
 				7D2C2AFA2322F91200EF424C /* Double+Extensions.swift in Sources */,
 				7D340970232C31C000093416 /* WeatherView.swift in Sources */,
 				7DE0ED00230C758F00D15F54 /* ForcastView.swift in Sources */,
+				7D6698652379ED6600EDC320 /* MapsEventTracker.swift in Sources */,
 				7D34096A232C317000093416 /* WeatherViewModel.swift in Sources */,
 				7D340978232C32C900093416 /* Forcast.swift in Sources */,
 				7DE0ED062314751A00D15F54 /* UIView+Extensions.swift in Sources */,
+				7D66986C2379ED6600EDC320 /* MapsWireframe.swift in Sources */,
 				7DB9836922FE0B0B00444B14 /* AppDelegate.swift in Sources */,
+				7D6698682379ED6600EDC320 /* MapsViewController.swift in Sources */,
 				7D340968232C316000093416 /* WeatherInteractor.swift in Sources */,
 				7D34097A232C32F300093416 /* DailyForcast.swift in Sources */,
 				7D34096E232C31B100093416 /* WeatherWireframe.swift in Sources */,
+				7D6698672379ED6600EDC320 /* MapsInterface.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

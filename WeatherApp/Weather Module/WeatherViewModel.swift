@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+struct WeatherViewModel {
+
+    var weatherData: WeatherData?
+    var city: String?
+    var state: String?
+    var dateString: String?
+}
+

@@ -1,0 +1,1 @@
+../Yes/Mock___FILEBASENAME___UserInterface.swift

@@ -11,17 +11,18 @@ import UIKit
 
 
 protocol WeatherUserInterface: class {
-    func configure(weatherData: WeatherData)
-    func configure(city: String, state: String)
+    func configure(viewModel: WeatherViewModel)
 }
 
 protocol WeatherPresenterInterface: class, UITableViewDataSource, UITableViewDelegate {
     func didLoad()
+    func mapsButtonPressed()
 }
 
 protocol WeatherInteractorInput {
     func fetchDarkSky(latitude: Double, longitude: Double)
     func fetchCityState(latitude: Double, longitude: Double)
+    func dateString() -> String
 }
 
 protocol WeatherInteractorOutput: class {
@@ -30,7 +31,7 @@ protocol WeatherInteractorOutput: class {
 }
 
 protocol WeatherWireframeInterface {
-
+    func showMaps()
 }
 
 protocol WeatherEventTracking {

@@ -1,0 +1,1 @@
+../Module.xctemplate/Yes/___FILEBASENAME___Strings.swift
